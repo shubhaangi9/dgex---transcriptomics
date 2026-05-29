@@ -40,11 +40,12 @@ Output Layer:
 - Predicted target gene expression values
 
 ## Results
-The model successfully learned transcriptomic relationships between landmark and target genes.
-Observed performance:
-- Pearson correlation ≈ 0.97
-- Successful reconstruction of target gene expression profiles
-Visualization of training loss and prediction accuracy demonstrated effective learning of transcriptomic structure from landmark genes.
+- The neural network successfully learned transcriptomic relationships between landmark and target genes.
+- Observed performance:
+    - Pearson correlation ≈ 0.97
+    - Moderate Mean Squared Error values during reconstruction
+- Although the reconstruction error remained non-trivial due to the high dimensionality of transcriptomic prediction and the use of dropout regularization, the strong correlation suggests that the model effectively captured global gene expression patterns and transcriptomic structure.
+- Visualization of training loss and prediction accuracy demonstrated effective learning of transcriptomic structure from landmark genes.
 
 ## Future Improvements
 - Experiment with deeper neural network architectures
@@ -73,5 +74,6 @@ Visualization of training loss and prediction accuracy demonstrated effective le
 ## Limitations
 - Simplified implementation inspired by D-GEX
 - Limited hyperparameter optimization
+- Global MSE values remained moderately high due to the complexity and dimensionality of transcriptomic reconstruction.
 - Model trained on a subset of transcriptomic features
 - Biological interpretability of neural network predictions remains limited
